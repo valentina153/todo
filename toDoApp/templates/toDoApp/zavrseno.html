@@ -1,0 +1,34 @@
+{% extends 'toDoApp/base.html' %}
+{% load static %}
+{% block sadrzaj %}
+
+<h1>Završeni zadaci</h1>
+<div class="row">
+{% for todo in todos %}
+<div class="col-sm-3">
+<div class="card border-primary mb-3 {% if todo.važno %}border-danger{% endif %}" style="max-width: 18rem; height: 220px">
+  <div class="card-header" style="text-align: center; font-weight: bold">
+    {{ todo.naslov }}
+    {% if todo.važno %}
+    <img src="{% static 'toDoApp/important.png' %}" width="30px" height="30px" style="float: left">
+    {% endif %}
+  </div>
+  <div class="card-body text-secondary">
+    <h5 class="card-title">Završeno na dan {{ todo.datumZavrsetka }}</h5>
+    <p class="card-text" style="color: black;{% if not todo.opis %}visibility: hidden{% endif %}">
+        {% if not todo.opis %}Bez opisa{% endif %}
+        {{ todo.opis }}
+    </p>
+    <hr>
+    <a href="{% url 'toDoApp:izbrisi' todo.id %}" class="akcije" id="brisi">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
+            <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"/>
+        </svg>
+    </a>
+  </div>
+</div>
+</div>
+{% endfor %}
+</div>
+
+{% endblock %}

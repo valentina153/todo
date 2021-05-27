@@ -1,0 +1,22 @@
+{% extends 'autentikacija/base.html' %}
+{% load static %}
+{% block sadrzaj %}
+
+<br>
+<img src="{% static 'autentikacija/prijava.png' %}" width="150px" height="150px" class="slika">
+<h1 class="naslov">Prijava</h1><br>
+<div class="registracija">
+    <form method="POST">
+        {% if greska %}
+        <div class="alert alert-danger" role="alert">
+            {{ greska }}
+        </div>
+        {% endif %}
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-dark">Prijavite se</button>
+    </form>
+</div>
+
+{% endblock %}
+

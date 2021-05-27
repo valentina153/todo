@@ -1,0 +1,16 @@
+{% extends 'toDoApp/base.html' %}
+{% block sadrzaj %}
+
+<h1>Dodaj novi zadatak</h1>
+<div style="text-align: center">
+<div class="jumbotron">
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-dark spremi">Dodaj</button>
+    </form>
+</div>
+</div>
+
+{% endblock %}
+

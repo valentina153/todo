@@ -1,0 +1,104 @@
+body {
+    font-family: Goudy Old Style;
+    height: 100%;
+}
+
+.naziv {
+    font-family: Segoe Script;
+}
+
+.lijeva, .desna {
+    height: 100vh;
+    width: 100%;
+}
+
+.lijeva {
+    background-image: url("pozadina5.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: rgb(255, 127, 39);
+    vertical-align: middle;
+    text-align: center;
+}
+
+.jumbotron {
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+    background-color: #e9ecef;
+    border-radius: .3rem;
+    opacity: 0.9;
+    margin-top: 100px;
+}
+
+.gumbi {
+    align-items: center;
+}
+
+.registriraj, .prijavi {
+    border-radius: 10px;
+    background-color: rgb(6, 32, 48);
+    padding: 10px;
+    color: rgb(255, 127, 39);
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 5px;
+    border: 0.5px solid black;
+}
+
+.registriraj:hover, .prijavi:hover, .btn:hover {
+    background-color: rgb(255, 127, 39);
+    color: white;
+    border: 0.5px solid rgb(255, 127, 39);
+}
+
+.desna {
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow: auto;
+}
+
+.prijavi {
+    margin-left: 10px;
+}
+
+.slika {
+    margin: 15px auto;
+    display: block;
+}
+
+.naslov {
+    font-size: 55px;
+    text-align: center;
+    color: rgb(255, 127, 39);
+}
+
+.helptext {
+    display: block;
+    font-size: small;
+}
+
+label {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+li {
+    font-size: small;
+}
+
+::marker {
+    font-size: small;
+}
+
+.registracija {
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+    background-color: whitesmoke;
+    border-radius: .3rem;
+    color: black;
+}
+
+.btn {
+    border: 0.5px solid rgb(255, 127, 39);
+    color: rgb(255, 127, 39);
+    border-radius: 5px;
+}
